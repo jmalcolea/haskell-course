@@ -2,6 +2,16 @@
 -- Question 1
 -- Add the type signatures for the functions below and then remove the comments and try to compile.
 -- (Use the types presented in the lecture.)
+f1 :: Floating a => a -> a -> a -> a
+f1 x y z = x ** (y/z)
+f2 :: Floating a => a -> a -> a -> a
+f2 x y z = sqrt (x/y - z)
+f3 :: Show a => Char -> a -> [Char] -> [Char]
+f3 x y z = x:(show y ++ z)
+f4 :: Ord a => a -> a -> Bool -> [Bool]
+f4 x y z = (x > y) : [z]
+f5 :: Eq a => [a] -> [a] -> [a] -> Bool
+f5 x y z = x == (y ++ z)
 
 -- f1 x y z = x ** (y/z)
 
