@@ -3,7 +3,10 @@
 -- returns a message accordingly. 
 -- The function has to take the hourly consumption of an electrical device, the hours of daily use, and the maximum monthly consumption allowed.
 -- (Monthly usage = consumption (kW) * hours of daily use (h) * 30 days).
-
+prueba :: Double -- ^ 
+  -> Double -- ^ 
+  -> String
+prueba a b = show (a*b)
 
 -- Question 2
 -- Prelude:
