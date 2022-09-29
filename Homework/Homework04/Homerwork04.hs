@@ -13,19 +13,25 @@ selectFromTupleList _ = "nothing to select from"
 -- Write a function that takes a list of elements of any type and, if the list has 3 or more elements, it
 -- removes them. Else, it does nothing. Do it two times, one with multiple function definitions and one with
 -- case expressions.
-getOnlyLess3th :: [a] -> [a]
-getOnlyLess3th (x:y:_) = [x,y]   
-getOnlyLess3th (x:_)   = [x]  
-getOnlyLess3th  _      = []    
+removeFirst3 :: [a] -> [a]   
+removeFirst3 (_:_:_:rest) = rest
+removeFirst3 list         = list
 
+removeFirst3case :: [a] -> [a]
+removeFirst3case list = case list of
+    (_:_:_:rest) -> rest
+    fullList          -> fullList
 
 -- Question 3
 -- Create a function that takes a 3-element tuple (all of type Integer) and adds them together
-
+sum3 :: (Integer, Integer, Integer) -> Integer
+sum3 (a, b, c) = a + b + c
 
 -- Question 4
 -- Implement a function that returns True if a list is empty and False otherwise.
-
+checkEmptyList :: [a] -> Bool
+checkEmptyList [] = True
+checkEmptyList _ = False
 
 -- Question 5
 -- Write the implementation of the tail function using pattern matching. But, instead of failing if
