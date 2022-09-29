@@ -25,8 +25,7 @@ removeFirst3' list = case list of
 -- Question 3
 -- Create a function that takes a 3-element tuple (all of type Integer) and adds them together
 sum3 :: (Integer, Integer, Integer) -> Integer
-sum3 (a, b, c) = a + b + c
-
+sum3 (a, b, c) = a + b + c 
 -- Question 4
 -- Implement a function that returns True if a list is empty and False otherwise.
 checkEmptyList :: [a] -> Bool
