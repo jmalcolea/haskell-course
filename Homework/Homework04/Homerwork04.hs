@@ -20,7 +20,7 @@ removeFirst3 list         = list
 removeFirst3' :: [a] -> [a]
 removeFirst3' list = case list of
     (_:_:_:rest) -> rest
-    fullList          -> fullList
+    fullList     -> fullList
 
 -- Question 3
 -- Create a function that takes a 3-element tuple (all of type Integer) and adds them together
@@ -35,8 +35,15 @@ checkEmptyList _ = False
 -- Question 5
 -- Write the implementation of the tail function using pattern matching. But, instead of failing if
 -- the list is empty, return an empty list.
+tail' :: [a] -> [a]
+tail' (x:rest) = rest
+tail' []      = []
 
 
 -- Question 6
 -- write a case expression wrapped in a function that takes an Int and adds one if it's even. Otherwise does nothing. 
 -- (Use the `even` function to check if the number is even.)
+addOneToEven :: Int -> Int
+addOneToEven x = case even x of
+    True -> x + 1
+    False -> x
