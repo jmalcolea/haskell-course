@@ -5,10 +5,18 @@
 nested :: [([Int], [Int])]
 nested = [([1,2],[3,4]), ([5,6],[7,8])]
 
+selectFromTupleList :: [([Int], [Int])] -> String
+selectFromTupleList [(_,[_,k]),_] =  show k
+selectFromTupleList _ = "nothing to select from"
+
 -- Question 2
 -- Write a function that takes a list of elements of any type and, if the list has 3 or more elements, it
 -- removes them. Else, it does nothing. Do it two times, one with multiple function definitions and one with
 -- case expressions.
+getOnlyLess3th :: [a] -> [a]
+getOnlyLess3th (x:y:_) = [x,y]   
+getOnlyLess3th (x:_)   = [x]  
+getOnlyLess3th  _      = []    
 
 
 -- Question 3
