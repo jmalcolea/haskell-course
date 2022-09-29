@@ -17,8 +17,8 @@ removeFirst3 :: [a] -> [a]
 removeFirst3 (_:_:_:rest) = rest
 removeFirst3 list         = list
 
-removeFirst3case :: [a] -> [a]
-removeFirst3case list = case list of
+removeFirst3' :: [a] -> [a]
+removeFirst3' list = case list of
     (_:_:_:rest) -> rest
     fullList          -> fullList
 
