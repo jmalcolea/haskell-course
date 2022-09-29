@@ -1,3 +1,4 @@
+import System.Win32 (COORD(x))
 -- Question 1
 -- Lets say you have the nested values defined bellow. How would you get the value of
 -- 4 by using only pattern matching in a function?
@@ -46,3 +47,5 @@ addOneToEven :: Int -> Int
 addOneToEven x = case even x of
     True -> x + 1
     False -> x
+
+-- Extra homework
