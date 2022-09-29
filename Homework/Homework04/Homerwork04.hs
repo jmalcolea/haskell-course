@@ -36,10 +36,8 @@ checkEmptyList _ = False
 -- Write the implementation of the tail function using pattern matching. But, instead of failing if
 -- the list is empty, return an empty list.
 tail' :: [a] -> [a]
-tail' ('a':'d':rest) = rest
 tail' (x:rest) = rest
 tail' []      = []
-
 
 -- Question 6
 -- write a case expression wrapped in a function that takes an Int and adds one if it's even. Otherwise does nothing. 
