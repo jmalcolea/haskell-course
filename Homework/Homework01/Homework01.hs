@@ -12,5 +12,5 @@
 -- Define a function that calculates the volume of a cylinder by composing the previous function together with the height of the cylinder. 
 
 -- Question 5
--- Define a function that checks if the volume of a cylinder is greater than or equal to 42.
+-- Define a function that takes the height and radius of a cylinder and checks if the volume is greater than or equal to 42.
 
