@@ -1,7 +1,19 @@
+import System.Win32.Console (COORD(y))
+
 -- Create a higher-order function that takes 3 parameters: A function and the two parameters that that function takes, and
 -- flips the order of the parameters.
 -- For example this: `(/) 6 2` returns `3`. But this: `flip' (/) 6 2` returns `0.3333333333`
+multiply ::  Num a => a -> a -> a
+multiply x y = x * y
 
+divide :: Floating a => a -> a -> a
+divide x y = x / y
+
+highOrderFunction :: Num a => (a -> a -> a) -> a -> a -> a
+highOrderFunction f x y = f (f x y) y 
+
+flip' :: (a -> b -> c) -> b -> a -> c  
+flip' f y x = f x y 
 
 -- Create the `uncurry'` function that converts a curried function to a function on pairs. So this: `(+) 1 2` that returns `3` can be written as
 -- `uncurry' (+) (1,2)` (with the two different arguments inside a pair).
